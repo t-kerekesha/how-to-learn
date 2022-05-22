@@ -14,13 +14,10 @@
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
-  background-color: #f2f2f2;
   box-sizing: border-box;
+  background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
-  border: 1px red solid;
-  /* position: relative; */
   /* padding: 0; */
   /* margin: 0; */
 }
@@ -33,7 +30,6 @@
   font-size: 102px;
   font-weight: bold;
   z-index: 2;
-  border: 1px red solid;
 }
 
 .header__subtitle {
@@ -46,7 +42,6 @@
   font-size: 18px;
   font-weight: normal;
   z-index: 2;
-  border: 1px red solid;
 }
 
 .header__link {
@@ -64,7 +59,6 @@
   bottom: 0;
   right: 0;
   z-index: 1;
-  border: 1px red solid;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -75,7 +69,6 @@
   position: absolute;
   top: 64px;
   right: 0;
-  border: 1px red solid;
 }
 
 .logo {
@@ -84,7 +77,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px red solid;
 }
 
 .logo_place_header {
@@ -120,7 +112,6 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
-  border: 1px red solid;
 }
 
 .two-columns__main-text {
@@ -136,7 +127,6 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  border: 1px red solid;
 }
 
 .two-columns__span-accent {
@@ -149,7 +139,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-title {
@@ -161,6 +152,10 @@
   text-align: center;
 }
 
+.section-title_theme_dark {
+  color: white;
+}
+
 .section-subtitle {
   margin: 0;
   margin-top: 20px;
@@ -169,6 +164,10 @@
   font-size: 24px;
   font-weight: normal;
   text-align: center;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
 }
 
 .table {
@@ -187,6 +186,14 @@
   row-gap: 20px;
   width: 250px;
   margin-top: 60px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
 }
 
 .table__heading {
@@ -246,14 +253,33 @@
   font-weight: normal;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+.kaufman {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #1f1f1f;
+  z-index: -2;
 }
 
-section, div, h1, h2, h3, h4, p, a, ul, li {
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  width: 877px;
+  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+
+
+section, div, h1, h2, h3, h4, p, a, ul, li, header {
   border: 1px red solid;
 }
