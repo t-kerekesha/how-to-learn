@@ -7,6 +7,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 .header {
@@ -18,8 +19,6 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  /* padding: 0; */
-  /* margin: 0; */
 }
 
 .header__title {
@@ -55,6 +54,7 @@
   background-image: url(../images/header-image.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -85,6 +85,10 @@
   top: 30px;
   left: 64px;
   z-index: 2;
+}
+
+.logo_place_footer {
+  background-image: url(../images/logo_place_footer.svg);
 }
 
 .content {
@@ -278,8 +282,93 @@
   z-index: -1;
 }
 
-
-
-section, div, h1, h2, h3, h4, p, a, ul, li, header {
-  border: 1px red solid;
+.footer {
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-color: #1f1f1f;
 }
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.footer__column_content_info {
+  justify-content: start;
+}
+
+.footer__column_content_social {
+  justify-content: start;
+}
+
+.footer__author {
+  margin: 18px 0px;
+  color: white;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column-heading {
+  margin: 0;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer__column-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+.footer__column-link {
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__social-icon {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer__social-icon_type_fb {
+  background-image: url(../images/facebook_color_white.svg);
+}
+
+.footer__social-icon_type_vk {
+  background-image: url(../images/vk_color_white.svg);
+}
+
+.footer__social-icon_type_in {
+  background-image: url(../images/instagram_color_white.svg);
+}
+
+/* section, div, h1, h2, h3, h4, p, a, ul, li, header, footer {
+  border: 1px red solid;
+} */
