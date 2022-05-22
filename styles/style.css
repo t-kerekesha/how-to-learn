@@ -204,10 +204,11 @@
 }
 
 .feynman {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* row-gap: 70px; */
+  row-gap: 70px;
   height: 890px;
   box-sizing: border-box;
   padding-top: 100px;
@@ -216,7 +217,6 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 867px 637px;
-  position: relative;
 }
 
 .feynman__title {
