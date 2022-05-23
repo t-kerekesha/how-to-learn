@@ -11,6 +11,7 @@
 }
 
 .header {
+  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
@@ -19,6 +20,7 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
+  z-index: -2;
 }
 
 .header__title {
@@ -28,7 +30,6 @@
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 2;
 }
 
 .header__subtitle {
@@ -40,7 +41,6 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  z-index: 2;
 }
 
 .header__link {
@@ -58,7 +58,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -69,6 +69,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: -2;
 }
 
 .logo {
@@ -84,7 +85,6 @@
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 2;
 }
 
 .logo_place_footer {
@@ -348,16 +348,17 @@
 }
 
 .footer__social-icon {
-  display: inline-block;
   height: 16px;
   width: 16px;
   margin-right: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  object-fit: contain;
+  object-position: center;
 }
 
-.footer__social-icon_type_fb {
+
+
+/* Реализация иконки в css
+/* .footer__social-icon_type_fb {
   background-image: url(../images/facebook_color_white.svg);
 }
 
@@ -367,7 +368,7 @@
 
 .footer__social-icon_type_in {
   background-image: url(../images/instagram_color_white.svg);
-}
+} */
 
 /* section, div, h1, h2, h3, h4, p, a, ul, li, header, footer {
   border: 1px red solid;
