@@ -20,12 +20,12 @@
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  z-index: -2;
+  z-index: 0;
 }
 
 .header__title {
   margin: 0;
-  width: 730px;
+  max-width: 730px;
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
@@ -33,9 +33,9 @@
 }
 
 .header__subtitle {
+  position: absolute;
   margin: 0;
   width: 388px;
-  position: absolute;
   bottom: 30px;
   left: 64px;
   line-height: 25px;
@@ -51,10 +51,8 @@
 .header__main-illustration {
   width: 765px;
   height: 608px;
-  background-image: url(../images/header-image.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -134,8 +132,6 @@
 }
 
 .two-columns__span-accent {
-  line-height: 34px;
-  font-size: 24px;
   font-weight: bold;
 }
 
@@ -157,7 +153,7 @@
 }
 
 .section-title_theme_dark {
-  color: white;
+  color: #ffffff;
 }
 
 .section-subtitle {
@@ -171,7 +167,7 @@
 }
 
 .section-subtitle_theme_dark {
-  color: white;
+  color: #ffffff;
 }
 
 .table {
@@ -195,7 +191,7 @@
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
+  color: #ffffff;
   margin-right: 0;
   margin-top: 80px;
 }
@@ -220,7 +216,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 70px;
-  height: 890px;
+  min-height: 890px;
   box-sizing: border-box;
   padding-top: 100px;
   background-color: #f2f2f2;
@@ -266,7 +262,7 @@
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #1f1f1f;
-  z-index: -2;
+  z-index: 0;
 }
 
 .kaufman__triangle {
@@ -284,10 +280,11 @@
 
 .footer {
   min-height: 350px;
-  display: flex;
-  justify-content: center;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
   background-color: #1f1f1f;
 }
 
@@ -317,7 +314,7 @@
 
 .footer__author {
   margin: 18px 0px;
-  color: white;
+  color: #ffffff;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -325,23 +322,26 @@
 
 .footer__column-heading {
   margin: 0;
-  color: white;
+  color: #ffffff;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .footer__column-links {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  list-style: none;
   margin-top: 20px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .footer__column-link {
   margin: 0;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
@@ -355,21 +355,7 @@
   object-position: center;
 }
 
-
-
-/* Реализация иконки в css
-/* .footer__social-icon_type_fb {
-  background-image: url(../images/facebook_color_white.svg);
+/* Реализация эффекта при наведении курсора */
+:any-link:hover {
+  color: #daa113;
 }
-
-.footer__social-icon_type_vk {
-  background-image: url(../images/vk_color_white.svg);
-}
-
-.footer__social-icon_type_in {
-  background-image: url(../images/instagram_color_white.svg);
-} */
-
-/* section, div, h1, h2, h3, h4, p, a, ul, li, header, footer {
-  border: 1px red solid;
-} */
