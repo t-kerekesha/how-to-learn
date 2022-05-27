@@ -1,3 +1,14 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Page */
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -10,17 +21,19 @@
   box-sizing: border-box;
 }
 
+/* Header */
+
 .header {
   position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
   box-sizing: border-box;
+  /* выше установили ограничения для секции */
   background-color: #f2f2f2;
   display: flex;
   align-items: center;
-  z-index: 0;
+  overflow: hidden;
 }
 
 .header__title {
@@ -29,7 +42,8 @@
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
-  font-weight: bold;
+  font-weight: 700;
+  z-index: 2;
 }
 
 .header__subtitle {
@@ -41,6 +55,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  z-index: 2;
 }
 
 .header__link {
@@ -56,7 +71,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -67,8 +82,9 @@
   position: absolute;
   top: 64px;
   right: 0;
-  z-index: -2;
 }
+
+/* Logo */
 
 .logo {
   width: 228px;
@@ -83,16 +99,21 @@
   position: absolute;
   top: 30px;
   left: 64px;
+  z-index: 2;
 }
 
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
 }
 
+/* Content */
+
 .content {
   display: flex;
   flex-direction: column;
 }
+
+/* Description */
 
 .description {
   padding-top: 100px;
@@ -132,8 +153,10 @@
 }
 
 .two-columns__span-accent {
-  font-weight: bold;
+  font-weight: 700;
 }
+
+/* Digits */
 
 .digits {
   display: flex;
@@ -148,12 +171,13 @@
   width: 60%;
   line-height: 1.15;
   font-size: 60px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 }
 
 .section-title_theme_dark {
   color: #ffffff;
+  z-index: 1;
 }
 
 .section-subtitle {
@@ -168,7 +192,10 @@
 
 .section-subtitle_theme_dark {
   color: #ffffff;
+  z-index: 1;
 }
+
+/* Table */
 
 .table {
   margin: 0;
@@ -194,13 +221,14 @@
   color: #ffffff;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
 }
 
 .table__heading {
   margin: 0;
   line-height: 1.15;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .table__text {
@@ -209,6 +237,8 @@
   font-size: 18px;
   font-weight: normal;
 }
+
+/* Feynman */
 
 .feynman {
   position: relative;
@@ -231,7 +261,7 @@
   width: 648px;
   line-height: 1.15;
   font-size: 120px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -253,6 +283,8 @@
   font-weight: normal;
 }
 
+/* Kaufman */
+
 .kaufman {
   position: relative;
   overflow: hidden;
@@ -262,7 +294,6 @@
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #1f1f1f;
-  z-index: 0;
 }
 
 .kaufman__triangle {
@@ -275,8 +306,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
 }
+
+/* Footer */
 
 .footer {
   min-height: 350px;
@@ -325,7 +357,7 @@
   color: #ffffff;
   line-height: 30px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .footer__column-links {
@@ -356,6 +388,16 @@
 }
 
 /* Реализация эффекта при наведении курсора */
+
+.link {
+  transition: opacity .4s ease-in-out;
+}
+
 .link:hover {
-  color: #daa113;
+  /* color: #daa113; */
+  opacity: .4;
+}
+
+.rotation {
+  animation: rotation 20s infinite linear;
 }
