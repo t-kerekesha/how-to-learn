@@ -1,0 +1,10 @@
+/* Реализация эффекта при наведении курсора */
+
+.link {
+  transition: opacity .4s ease-in-out;
+}
+
+.link:hover {
+  /* color: #daa113; */
+  opacity: .4;
+}

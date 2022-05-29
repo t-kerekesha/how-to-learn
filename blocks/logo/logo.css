@@ -1,0 +1,9 @@
+/* Logo */
+
+.logo {
+  width: 228px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
