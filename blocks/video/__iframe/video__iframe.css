@@ -2,4 +2,13 @@
   width: 515px;
   height: 316px;
   border: none;
+  transition: 1s ease-out;
+
+}
+
+.video__iframe:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #1f1f1f;
+  margin-left: 25px;
+  margin-right: 25px;
 }
