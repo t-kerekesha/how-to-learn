@@ -1,9 +1,9 @@
-.section-subtitle {
+.khan__quote {
   margin: 0;
-  margin-top: 20px;
-  width: 60%;
+  width: 790px;
+  margin-top: 50px;
+  margin-bottom: 36px;
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  text-align: center;
 }

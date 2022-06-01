@@ -2,7 +2,7 @@
   width: 515px;
   height: 316px;
   border: none;
-  transition: 1s ease-out;
+  transition: transform 1s ease-out, box-shadow 1s ease-out, margin 1s ease-out;
 
 }
 
